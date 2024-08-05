@@ -93,6 +93,11 @@ class YaruWindow {
     return YaruWindow.of(context).setTitle(title);
   }
 
+  /// Resizes the window to `width` and `height`.
+  static Future<void> setSize(BuildContext context, Size size) {
+    return YaruWindow.of(context).setSize(size);
+  }
+
   /// Sets whether the window can be minimized.
   static Future<void> setMinimizable(BuildContext context, bool minimizable) {
     return YaruWindow.of(context).setMinimizable(minimizable);
@@ -191,6 +196,9 @@ class YaruWindowInstance {
 
   /// Sets the title of the window.
   Future<void> setTitle(String title) => _platform.setTitle(_id, title);
+
+  /// Resizes the window to `width` and `height`.
+  Future<void> setSize(Size size) => _platform.setSize(_id, size);
 
   /// Sets whether the window can be minimized.
   Future<void> setMinimizable(bool minimizable) {
