@@ -70,6 +70,9 @@ class YaruWindowManager extends YaruWindowPlatform {
   Future<void> setTitle(int id, String title) => _wm
       .invokeSetter(_wm.setTitle, title)
       .then((_) => _listener._updateState());
+  @override
+  Future<void> setSize(int id, Size size) =>
+      _wm.invokeSetter(_wm.setSize, size).then((_) => _listener._updateState());
 
   @override
   Future<void> setMinimizable(int id, bool minimizable) => _wm

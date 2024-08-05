@@ -74,6 +74,11 @@ abstract class YaruWindowPlatform extends PlatformInterface {
     throw UnimplementedError('setTitle');
   }
 
+  /// Resizes the window to `width` and `height`.
+  Future<void> setSize(int id, Size size) {
+    throw UnimplementedError('setSize');
+  }
+
   /// Sets whether the window with the given [id] is minimizable.
   Future<void> setMinimizable(int id, bool minimizable) {
     throw UnimplementedError('setMinimizable');
